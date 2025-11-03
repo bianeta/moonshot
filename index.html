@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> </title>
+    </head>
+    <body>
+        <h1>Welcome to My Website!</h1>
+        <p>This website is so YOU ( Yes YOU) can learn about the gospel made easy </p>
+    </body>
+    </html>
+
+
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <!-- Previous Button -->
+        <button class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</button>
+        
+        <!-- Image Container (Clickable) -->
+        <a href="#" id="imageLink" onclick="openFullImage(event)">
+              <img src="images/image1.jpg" alt="Gallery Image" id="displayedImage">
+        </a>
+      
+        </a>
+        
+        <!-- Next Button -->
+        <button class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
