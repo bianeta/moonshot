@@ -64,11 +64,59 @@ q1a3.addEventListener("click", murcury);
 
 
 
-q2a1.addEventListener("click", sword);
-q2a2.addEventListener("click", spell);
 
-q3a1.addEventListener("click", sword);
-q3a2.addEventListener("click", spell);
+q2a1.addEventListener("click", thesun);
+q2a1.addEventListener("click", mars);
+q2a1.addEventListener("click", venus);
+
+q2a2.addEventListener("click", dwarf);
+q2a2.addEventListener("click", uranus);
+
+q2a3.addEventListener("click",saturn );
+q2a2.addEventListener("click", jupiter);
+q2a2.addEventListener("click",neptune );
+
+
+q2a4.addEventListener("click", murcury);
+q2a4.addEventListener("click", earth);
+
+
+q3a1.addEventListener("click", jupiter);
+q3a1.addEventListener("click", saturn);
+q3a1.addEventListener("click", uranus);
+q3a1.addEventListener("click", neptune);
+
+q3a2.addEventListener("click", dwarf);
+
+q3a3.addEventListener("click", earth);
+q3a3.addEventListener("click", thesun);
+q3a3.addEventListener("click", murcury);
+q3a3.addEventListener("click", mars);
+q3a3.addEventListener("click", venus);
+
+
+q4a1.addEventListener("click", earth);
+q4a1.addEventListener("click", thesun);
+q4a1.addEventListener("click", murcury);
+q4a1.addEventListener("click", mars);
+q4a1.addEventListener("click", venus);
+q4a1.addEventListener("click", dwarf);
+
+
+q4a2.addEventListener("click", uranus);
+q4a2.addEventListener("click", neptune);
+
+
+q4a3.addEventListener("click", jupiter);
+
+
+
+q4a4.addEventListener("click", saturn);
+
+
+
+
+
 
 button.addEventListener("click", restart);
 
