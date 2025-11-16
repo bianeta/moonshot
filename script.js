@@ -109,14 +109,48 @@ q4a2.addEventListener("click", neptune);
 
 q4a3.addEventListener("click", jupiter);
 
-
-
 q4a4.addEventListener("click", saturn);
 
 
+q5a1.addEventListener("click", jupiter);
+q5a1.addEventListener("click", saturn);
+q5a1.addEventListener("click", uranus);
+q5a1.addEventListener("click", neptune);
 
 
 
+q5a3.addEventListener("click", murcury);
+
+q5a2.addEventListener("click", venus);
+q5a2.addEventListener("click", earth);
+q5a2.addEventListener("click", mars);
+
+
+q6a1.addEventListener("click", thesun);
+
+
+q6a2.addEventListener("click", jupiter);
+q6a2.addEventListener("click", saturn);
+q6a2.addEventListener("click", uranus);
+q6a2.addEventListener("click", neptune);
+q6a2.addEventListener("click", murcury);
+q6a2.addEventListener("click", venus);
+q6a2.addEventListener("click", earth);
+q6a2.addEventListener("click", mars);
+q6a2.addEventListener("click", dwarf);
+
+q7a1.addEventListener("click", dwarf);
+
+q7a2.addEventListener("click", jupiter);
+q7a2.addEventListener("click", saturn);
+q7a2.addEventListener("click", uranus);
+q7a2.addEventListener("click", neptune);
+q7a2.addEventListener("click", murcury);
+q7a2.addEventListener("click", venus);
+q7a2.addEventListener("click", earth);
+q7a2.addEventListener("click", mars);
+
+q7a3.addEventListener("click", thesun);
 
 button.addEventListener("click", restart);
 
@@ -130,28 +164,116 @@ function restart() {
 
 
 
-function sword() {
-  swordScore += 1;
+function saturn() {
+  saturnScore += 1;
   questionCount +=1;
-  console.log("questionCount ="+questionCount+" swordScore = "+ swordScore);
+  console.log("questionCount ="+questionCount+" saturnScore = "+ saturnScore);
   updateResult();
 }
-function spell() {
-  spellScore += 1;
+function thesun() {
+  thesunScore += 1;
   questionCount +=1;
-  console.log("questionCount ="+questionCount+" spellScore = "+ spellScore);
+  console.log("questionCount ="+questionCount+" thesunScore = "+ thesunScore);
+  updateResult();
+
+}
+function mars() {
+  marsScore += 1;
+  questionCount +=1;
+  console.log("questionCount ="+questionCount+" marsScore = "+ marsScore);
+  updateResult();
+}
+
+
+function earth() {
+  marsScore += 1;
+  questionCount +=1;
+  console.log("questionCount ="+questionCount+" earthScore = "+ earthScore);
+  updateResult();
+}
+function murcury() {
+  murcuryScore += 1;
+  questionCount +=1;
+  console.log("questionCount ="+questionCount+" murcuryScore = "+ murcuryScore);
+  updateResult();
+}
+function dwarf() {
+  dwarfScore += 1;
+  questionCount +=1;
+  console.log("questionCount ="+questionCount+" dwarfScore = "+ dwarfScore);
+  updateResult();
+}
+function uranus() {
+  uranusScore += 1;
+  questionCount +=1;
+  console.log("questionCount ="+questionCount+" uranusScore = "+ uranusScore);
+  updateResult();
+}
+function venus() {
+  venusScore += 1;
+  questionCount +=1;
+  console.log("questionCount ="+questionCount+" venusScore = "+ venusScore);
+  updateResult();
+}
+function neptune() {
+  neptuneScore += 1;
+  questionCount +=1;
+  console.log("questionCount ="+questionCount+" neptuneScore = "+ neptuneScore);
+  updateResult();
+}
+function jupiter() {
+  jupiterScore += 1;
+  questionCount +=1;
+  console.log("questionCount ="+questionCount+" jupiterScore = "+ jupiterScore);
+  updateResult();
   updateResult();
 }
 function updateResult() {
-  if (questionCount ==3) {
-    result.innerHTML = "You are a spell user";
+  if (questionCount ==7) {
+    result.innerHTML = "Your planet is Venus";
     console.log("The quiz is done!");
-      if(spellScore>=2){
-        console.log("You are a spell user!");
+      if(venusScore>=2){
+        console.log("Your planet is Venus");
         } 
-      else if(swordScore >= 2){
-        result.innerHTML = "You are a sword user";
-        console.log("You are a sword user!");
+      }
+      else if(thesunScore >= 5){
+        result.innerHTML = "You got the sun";
+        console.log("You got the sun");
+        }
+        else if(marsScore >= 5){
+        result.innerHTML = "Your planet is Mars";
+        console.log("Your planet is Mars");
+        }
+         else if(saturnScore >= 5){
+        result.innerHTML = "Your planet is Saturn";
+        console.log("Your planet is Saturn");
+        }
+        else if(neptuneScore >= 5){
+        result.innerHTML = "Your planet is Neptune";
+        console.log(" Your planet us Neptune");
+        }
+        else if(murcuryScore >= 5){
+        result.innerHTML = "Your planet is Murcury";
+        console.log("Your planet is Murcury");
+        }
+        else if(jupitercore >= 5){
+        result.innerHTML = "Your planet is Jupiter";
+        console.log("Your planet is Jupiter");
+        }
+        
+        else if(earthScore >= 5){
+        result.innerHTML = "Your planet is Earth";
+        console.log("Your planet is Earth"); }
+
+        else if(uranusScore >= 5){
+        result.innerHTML = "Your planet is Uranus";
+        console.log("Your planet is Uranus");
+        }
+        else if(thesunScore >= 5){
+        result.innerHTML = "Your planet is a Dwarf planet";
+        console.log("Your plant is a Dwarf Planet");
         }
   }
-}
+  {
+
+  }
