@@ -165,116 +165,133 @@ function restart() {
 
 
 
+function saveScores() {
+  localStorage.setItem('thesunScore', thesunScore);
+  localStorage.setItem('venusScore', venusScore);
+  localStorage.setItem('earthScore', earthScore);
+  localStorage.setItem('marsScore', marsScore);
+  localStorage.setItem('jupiterScore', jupiterScore);
+  localStorage.setItem('saturnScore', saturnScore);
+  localStorage.setItem('uranusScore', uranusScore);
+  localStorage.setItem('neptuneScore', neptuneScore);
+  localStorage.setItem('murcuryScore', murcuryScore);
+  localStorage.setItem('dwarfScore', dwarfScore);
+  localStorage.setItem('questionCount', questionCount);
+}
+
 function saturn() {
   saturnScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" saturnScore = "+ saturnScore);
-  updateResult();
+  saveScores();
 }
 function thesun() {
   thesunScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" thesunScore = "+ thesunScore);
-  updateResult();
-
+  saveScores();
 }
 function mars() {
   marsScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" marsScore = "+ marsScore);
-  updateResult();
+  saveScores();
 }
 
-
 function earth() {
-  marsScore += 1;
+  earthScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" earthScore = "+ earthScore);
-  updateResult();
+  saveScores();
 }
 function murcury() {
   murcuryScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" murcuryScore = "+ murcuryScore);
-  updateResult();
+  saveScores();
 }
 function dwarf() {
   dwarfScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" dwarfScore = "+ dwarfScore);
-  updateResult();
+  saveScores();
 }
 function uranus() {
   uranusScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" uranusScore = "+ uranusScore);
-  updateResult();
+  saveScores();
 }
 function venus() {
   venusScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" venusScore = "+ venusScore);
-  updateResult();
+  saveScores();
 }
 function neptune() {
   neptuneScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" neptuneScore = "+ neptuneScore);
-  updateResult();
+  saveScores();
 }
 function jupiter() {
   jupiterScore += 1;
   questionCount +=1;
   console.log("questionCount ="+questionCount+" jupiterScore = "+ jupiterScore);
-  updateResult();
-  updateResult();
+  saveScores();
 }
-function updateResult() {
-  if (questionCount ==7) {
-    result.innerHTML = "Your planet is Venus";
-    console.log("The quiz is done!");
-      if(venusScore>=2){
-        console.log("Your planet is Venus");
-        } 
-      }
-      else if(thesunScore >= 5){
-        result.innerHTML = "You got the sun";
-        console.log("You got the sun");
-        }
-        else if(marsScore >= 5){
-        result.innerHTML = "Your planet is Mars";
-        console.log("Your planet is Mars");
-        }
-         else if(saturnScore >= 5){
-        result.innerHTML = "Your planet is Saturn";
-        console.log("Your planet is Saturn");
-        }
-        else if(neptuneScore >= 5){
-        result.innerHTML = "Your planet is Neptune";
-        console.log(" Your planet us Neptune");
-        }
-        else if(murcuryScore >= 5){
-        result.innerHTML = "Your planet is Murcury";
-        console.log("Your planet is Murcury");
-        }
-        else if(jupitercore >= 5){
-        result.innerHTML = "Your planet is Jupiter";
-        console.log("Your planet is Jupiter");
-        }
-        
-        else if(earthScore >= 5){
-        result.innerHTML = "Your planet is Earth";
-        console.log("Your planet is Earth"); }
-
-        else if(uranusScore >= 5){
-        result.innerHTML = "Your planet is Uranus";
-        console.log("Your planet is Uranus");
-        }
-        else if(thesunScore >= 5){
-        result.innerHTML = "Your planet is a Dwarf planet";
-        console.log("Your plant is a Dwarf Planet");
-        }
+function calculateResult() {
+  thesunScore = parseInt(localStorage.getItem('thesunScore')) || 0;
+  venusScore = parseInt(localStorage.getItem('venusScore')) || 0;
+  earthScore = parseInt(localStorage.getItem('earthScore')) || 0;
+  marsScore = parseInt(localStorage.getItem('marsScore')) || 0;
+  jupiterScore = parseInt(localStorage.getItem('jupiterScore')) || 0;
+  saturnScore = parseInt(localStorage.getItem('saturnScore')) || 0;
+  uranusScore = parseInt(localStorage.getItem('uranusScore')) || 0;
+  neptuneScore = parseInt(localStorage.getItem('neptuneScore')) || 0;
+  murcuryScore = parseInt(localStorage.getItem('murcuryScore')) || 0;
+  dwarfScore = parseInt(localStorage.getItem('dwarfScore')) || 0;
+  
+  var scores = {
+    'the Sun': thesunScore,
+    'Venus': venusScore,
+    'Earth': earthScore,
+    'Mars': marsScore,
+    'Jupiter': jupiterScore,
+    'Saturn': saturnScore,
+    'Uranus': uranusScore,
+    'Neptune': neptuneScore,
+    'Mercury': murcuryScore,
+    'a Dwarf Planet': dwarfScore
+  };
+  
+  var maxScore = 0;
+  var resultPlanet = 'a mystery celestial body';
+  
+  for (var planet in scores) {
+    if (scores[planet] > maxScore) {
+      maxScore = scores[planet];
+      resultPlanet = planet;
+    }
   }
-  {
+  
+  return resultPlanet;
+}
 
-  }
+if (window.location.pathname.includes('results.html')) {
+  window.addEventListener('DOMContentLoaded', function() {
+    var resultElement = document.getElementById('result');
+    if (resultElement) {
+      var result = calculateResult();
+      resultElement.innerHTML = "You are " + result + "!";
+      console.log("Quiz result: " + result);
+    }
+  });
+}
+
+if (button) {
+  button.addEventListener('click', function() {
+    localStorage.clear();
+    window.location.href = 'index.html';
+  });
+}

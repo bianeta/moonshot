@@ -1,9 +1,43 @@
- <a href="p2.html" class="button">Go back</a>
-    
-    
-    <h2 id="result">You are a...</h2>
-    <button id="restart">Restart</button>
-    
-  
-      
-   
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" content="ie=edge">
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+<style>
+    body {
+        background-color: rgb(216, 173, 216);
+    }
+    #result {
+        font-size: 2em;
+        color: indigo;
+        margin: 2em 0;
+        text-align: center;
+    }
+    .button-container {
+        text-align: center;
+        margin-top: 2em;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>What are YOU in our solar system</h1>
+        <p>Your quiz results are in!</p>
+    </header>
+
+    <main>
+        <h2 id="result">Calculating your result...</h2>
+        
+        <div class="button-container">
+            <a href="index.html" class="button">
+                <button id="restart">Take Quiz Again</button>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

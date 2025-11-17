@@ -28,8 +28,17 @@ The quiz uses a scoring system where each answer adds points to different celest
 The project runs on a simple Python HTTP server bound to `0.0.0.0:5000` to work with Replit's proxy system.
 
 ## Recent Changes
+- **2025-11-17**: Fixed quiz results functionality
+  - Implemented localStorage to persist quiz scores across pages
+  - Completed results.html page with proper HTML structure
+  - Created calculateResult() function to determine winner based on highest score
+  - Fixed JavaScript bugs (missing questionCount variable, earth function bug)
+  - Added proper result display on results page
+  - Fixed restart button to clear scores and return to start
+  
 - **2025-11-17**: Initial setup in Replit environment
   - Installed Python 3.11
   - Created server.py with cache-control headers for development
   - Configured workflow to run the web server
   - Added .gitignore for Python files
+  - Fixed HTML syntax errors in p2.html
