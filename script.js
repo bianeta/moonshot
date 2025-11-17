@@ -8,6 +8,7 @@ var uranusScore=0;
 var neptuneScore=0;
 var murcuryScore=0;
 var dwarfScore=0;
+var questionCount=0;
 
 
 
