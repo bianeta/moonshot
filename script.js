@@ -265,15 +265,7 @@ function calculateResult() {
     'a Dwarf Planet': dwarfScore
   };
   
-  var maxScore = 0;
-  var resultPlanet = 'a mystery celestial body';
-  
-  for (var planet in scores) {
-    if (scores[planet] > maxScore) {
-      maxScore = scores[planet];
-      resultPlanet = planet;
-    }
-  }
+
   
   return resultPlanet;
 }
