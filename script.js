@@ -263,8 +263,7 @@ function calculateResult() {
     'Neptune': neptuneScore,
     'Mercury': murcuryScore,
     'a Dwarf Planet': dwarfScore
-  };
-  
+  }
 
   
   return resultPlanet;
